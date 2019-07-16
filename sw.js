@@ -19,7 +19,7 @@ request.onsuccess = function(){
     var store = transaction.objectStore("mystore");
     var request1 = store.get("1");
     request1.onsuccess = function (){
-        console.log("request1: " + request1);
+        console.log("request1: " + this.result);
     }
     console.log(db);
 }
