@@ -43,7 +43,7 @@ var db;
      
     var request = store.get(key);
     request.onsuccess = function (event) {
-     
+      console.log(event);
       if (event.target.result === undefined) {
         result.innerHTML = "指定したキーは存在しません。";
       } else {
