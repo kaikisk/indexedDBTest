@@ -17,7 +17,8 @@ setInterval(function(){
         db = this.result;
         var transaction = db.transaction(["mystore"], "readonly");
         var store = transaction.objectStore("mystore");
-        var request1 = store.get("1");
+        var request1 = store.openCursor();
+        
         request1.onsuccess = function (){
             console.log("request1:  key: " + this.result.mykey + " ,value: " + this.result.myvalue);
         }
