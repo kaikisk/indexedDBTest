@@ -13,12 +13,11 @@ self.addEventListener('fetch', function(event) {});
 const request = indexedDB.open( 'mydb', 1.0);
 var db;
 
-var transaction = db.transaction(["mystore"], "readonly");
-var store = transaction.objectStore("mystore");
-var request1 = store.get("1");
-
 request.onsuccess = function(){
     db = this.result;
+    var transaction = db.transaction(["mystore"], "readonly");
+    var store = transaction.objectStore("mystore");
+    var request1 = store.get("1");
     console.log(db);
     console.log("request1: " + request1);
 }
