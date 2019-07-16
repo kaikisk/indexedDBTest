@@ -19,7 +19,7 @@ setInterval(function(){
         var store = transaction.objectStore("mystore");
         var request1 = store.get("1");
         request1.onsuccess = function (){
-            console.log("request1: " + this.result);
+            console.log("request1:  key: " + this.result.key + " ,value: " + this.result.myvalue);
         }
         console.log(db);
     }
