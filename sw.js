@@ -18,8 +18,8 @@ request.onsuccess = function(){
     var transaction = db.transaction(["mystore"], "readonly");
     var store = transaction.objectStore("mystore");
     var request1 = store.get("1");
-    request1.onsuccess = function (event){
-        console.log("request1: " + request1.target.result.myvalue);
+    request1.onsuccess = function (){
+        console.log("request1: " + request1);
     }
     console.log(db);
 }
