@@ -20,7 +20,7 @@ setInterval(function(){
         var request1 = store.openCursor();
 
         request1.onsuccess = function (){
-            console.log("request1:  key: " + this.result.key + " ,value: " + this.result.myvalue);
+            console.log("request1:  key: " + this.result.key + " ,value: " + this.result.value);
             this.result.continue();
         }
         console.log(db);
