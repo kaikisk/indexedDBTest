@@ -32,7 +32,7 @@ var db;
       document.getElementById("newvalue").value = "";
     }
   }
-   
+
   function getValue(event) {
     var key = document.getElementById("selectkey").value;
     var result = document.getElementById("result");
@@ -50,9 +50,9 @@ var db;
         result.innerHTML = event.target.result.myvalue + "<br/>";
       }
     }
-  }
-   
-  function getAll(event) {
+}
+
+function getAll(event) {
    
     var result = document.getElementById("result");
     result.innerHTML = "";
@@ -73,7 +73,7 @@ var db;
        
       cursor.continue();
     }
-  }
+}
    
   function getCount(event) {
    
